@@ -1,19 +1,41 @@
 public class ArrayUtility {
 
     public static void print(int[] array) {
+        System.out.print(array);
 
     }
 
     public static int sum(int[] array) {
-        return 0;
+        int a = 0;
+        for(int i = 0; i<array.length;i++){
+            int b = array[i];
+            a+=b;
+        }
+        return a;
     }
 
     public static double average(int[] array) {
-        return 0;
+        double a = 0.0;
+        for(int i = 0; i<array.length;i++){
+            int b = array[i];
+            a+=b;
+
+        }
+        a/=array.length-1;
+        return a;
     }
 
     public static int minimum(int[] array) {
-        return 0;
+        int min = 0;
+        for(int i = 0; i<array.length-1; i++){
+            int smallest = array[i];
+            int second = array[i+1];
+            if(smallest>=second){
+                min=second;
+            }
+        }
+        return min;
+
     }
 
     public static int maximum(int[] array) {
