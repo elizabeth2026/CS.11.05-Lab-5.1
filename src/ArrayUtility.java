@@ -23,16 +23,17 @@ public class ArrayUtility {
 
         }
         double a = (av/array.length);
-        return a;
+        double c = (a*100);
+        int b = (int) c;
+        double e = (double) b;
+        return e/100;
     }
 
     public static int minimum(int[] array) {
-        int min = 0;
-        for(int i = 0; i<array.length-1; i++){
-            int smallest = array[i];
-            int second = array[i+1];
-            if(smallest>=second){
-                min=second;
+        int min = array[0];
+        for(int i = 0; i<array.length; i++){
+            if(min>array[i]){
+                min = array[i];
             }
         }
         return min;
@@ -40,13 +41,13 @@ public class ArrayUtility {
     }
 
     public static int maximum(int[] array) {
-        int count = 0;
-        for(int i = 0; i<array.length-1;i++){
-            if(array[i]<array[i+1]){
-                count = array[i+1];
+        int max = array[0];
+        for(int i = 0; i<array.length; i++){
+            if(max<array[i]){
+                max = array[i];
             }
         }
-        return count;
+        return max;
     }
 
     public static int evenCount(int[] array) {
