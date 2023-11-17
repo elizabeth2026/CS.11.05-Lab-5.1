@@ -54,8 +54,7 @@ public class ArrayUtility {
         int count = 0;
         for(int i = 0; i<array.length-1; i++){
             int a = array[i]%10;
-            if(array[i]==10 || a==0 || a==2 || a==4 || a==6 || a==8){
-
+            if(a==0 || a==2 || a==4 || a==6 || a==8){
 
                     count++;
             }
@@ -143,20 +142,35 @@ public class ArrayUtility {
     }
 
     public static void shiftRight(int[] array) {
-        for(int i = 0; i<array.length-1;i++){
-            array[0] = array[array.length-1];
-            array[i+1]=array[i];
+
+        for(int i = 1; i<array.length-1;i++){
+
+            int a = array[i-1];
+            int b = array[array.length-1];
+            array[0] = b;
+            array[i] = a;
+
 
         }
+
     }
 
     public static void shiftLeft(int[] array) {
+        for (int i = 0; i < array.length - 1; i++) {
+            int a = array[i + 1];
+            array[i] = a;
+            int b = array[0];
+            array[array.length-1] = b;
 
+
+            //?
+        }
     }
 
     public static void shiftRightNTimes(int[] array, int n) {
 
-    }
+        }
+
 
     public static void shiftLeftNTimes(int[] array, int n) {
 
